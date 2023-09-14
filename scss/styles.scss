@@ -12,19 +12,21 @@ html {
 }
 
 :root {
-    @media screen and (max-width: 20em) {
+    --font-size: 1.6rem;
+
+    @media screen and (max-width: 20em) and (hover:hover) {
         --font-size: 0.3rem;
     }
 
-    @media screen and (min-width: 20em) and (max-width: 40em) {
+    @media screen and (min-width: 20em) and (max-width: 40em) and (hover:hover) {
         --font-size: 0.7rem;
     }
 
-    @media screen and (min-width: 40em) and (max-width: 60em) {
+    @media screen and (min-width: 40em) and (max-width: 60em)  and (hover:hover) {
         --font-size: 1rem;
     }
 
-    @media screen and (min-width: 60em) {
+    @media screen and (min-width: 60em) and (hover:hover) {
         --font-size: 1.4rem;
     }
 }
@@ -37,8 +39,8 @@ html {
     box-sizing: inherit;
     font-family: inherit;
     font-size: var(--font-size);
-    line-height: 1.5em;
-    word-spacing: 0.5em;
+    line-height: 1.5rem;
+    word-spacing: 0.5rem;
 }
 
 // set-center
@@ -61,7 +63,7 @@ html {
 
 .logo-menu-container {
     display: flex;
-    padding: 1.2em 2em;
+    padding: 1.2rem 2rem;
     justify-content: space-between;
 }
 
@@ -252,7 +254,7 @@ html {
 %set-link-btn {
     display: block;
     text-align: inherit;
-    padding: 2em 2.3em;
+    padding: 2rem 2.3rem;
     font-size: var(--font-size);
     color: $clr-ternary;
 
@@ -260,8 +262,8 @@ html {
         &:focus {
             background-color: $clr-secondary;
             color: $clr-dark;
-            outline: 0.2em solid transparent;
-            border: 0.2em solid $clr-dark;
+            outline: 0.2rem solid transparent;
+            border: 0.2rem solid $clr-dark;
         }
     }
 }
@@ -298,8 +300,8 @@ html {
         position: absolute;
         top: 50%;
         right: 26%;
-        width: 1.2em;
-        height: 1.2em;
+        width: 1.2rem;
+        height: 1.2rem;
         background-color: $clr-secondary;
         transform: translate(-50%, -50%);
         clip-path: polygon(0 100%, 50% 0, 100% 100%);
@@ -346,20 +348,20 @@ html {
 .main-element {
 
     & h1 {
-        padding: 1.5em 0.5em 2.1em;
-        scroll-padding-top: 15em;
+        padding: 1.5rem 0.5rem 2.1rem;
+        scroll-padding-top: 15rem;
         color: $clr-dark;
     }
 
     & > .text {
         background-color: lighten($color: $clr-primary, $amount: 40);
         color: $clr-font;
-        margin: 1em 2em;
-        border-radius: 1.2em;
+        margin: 1rem 2rem;
+        border-radius: 1.2rem;
     }
 
     & h2 {
-        padding: 1.3em 1.5em;
+        padding: 1.3rem 1.5rem;
         color: $clr-dark;
     }
 }
@@ -367,7 +369,7 @@ html {
 // services-box-container
 
 .services-box-container {
-    padding: 1.3em 0.5em;
+    padding: 1.3rem 0.5rem;
 }
 
 // services
@@ -382,18 +384,18 @@ html {
 
 .service {
     background-color: $clr-ternary;
-    padding: 1.5em 2em;
-    border-radius: 2.5em;
-    margin-top: 2em;
+    padding: 1.5rem 2rem;
+    border-radius: 2.5rem;
+    margin-top: 2rem;
     width: 70vmin;
 
     & h3 {
-        padding: 3em 4em 2em;
+        padding: 3rem 4rem 2rem;
         color: $clr-font;
     }
 
     & p {
-        padding: 1.5em 2em;
+        padding: 1.5rem 2rem;
         color: $clr-font;
     }
 }
@@ -401,7 +403,7 @@ html {
 // content
 
 [class ^= 'content-'] {
-    padding: 1.2em 3.5em 1em 2.3em;
+    padding: 1.2rem 3.5rem 1rem 2.3rem;
     font-size: var(--font-size);
     line-height: 1.5;
 }
@@ -409,7 +411,7 @@ html {
 // text
 
 .text {
-    padding: 1.2em 2.1em;
+    padding: 1.2rem 2.1rem;
     color: $clr-dark;
 //  white-space: nowrap;
 }
@@ -418,10 +420,10 @@ html {
 
 .cards {
     display: flex;
-    padding: 1.4em 1.5em 1em;
+    padding: 1.4rem 1.5rem 1rem;
     justify-content: space-between;
     align-items: center;
-    gap: 2em;
+    gap: 2rem;
 
     @media screen and (max-width: 30em) {
         flex-direction: column;
@@ -435,12 +437,12 @@ html {
     flex-direction: column;
     color: $clr-dark;
     justify-content: space-between;
-    gap: 2em;
-    padding: 7em 3em;
+    gap: 2rem;
+    padding: 7rem 3rem;
     max-width: 70vmin;
-    border-radius: 3em;
+    border-radius: 3rem;
     background-color: $clr-secondary;
-    border: 0.1em solid $clr-dark;
+    border: 0.1rem solid $clr-dark;
 }
 
 // avatar
@@ -450,8 +452,8 @@ html {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    width: 10em;
-    height: 10em;
+    width: 10rem;
+    height: 10rem;
     clip-path: circle(50%);
     overflow: hidden;
     background-color: $clr-ternary;
@@ -491,14 +493,14 @@ html {
 .main-footer {
     display: flex;
     justify-content: space-between;
-    padding: 2.3em 1.3em 1.5em 3.6em;
+    padding: 1.7rem 1.3rem 1.5rem 3.6rem;
     background-color: $clr-dark;
     color: $clr-secondary;
 
     & address {
         font-family: inherit;
         font-style: normal;
-        margin-top: 2em;
+        margin-top: 2rem;
     }
 
     & address, & .footer-link {
@@ -509,7 +511,7 @@ html {
         display: block;
         color: $clr-secondary;
         text-decoration: none;
-        padding: 1.2em 0.5em;
+        padding: 0.6rem 0.25rem;
     }
 
     @media screen and (max-width: 40em) {
@@ -529,7 +531,7 @@ html {
 
 .footer-nav-list {
     list-style: none;
-    padding: 1.2em 0;
+    padding: 1.2rem 0;
 }
 
 // go-top
