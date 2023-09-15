@@ -14,16 +14,16 @@ html {
 :root {
     --font-size: 1.6rem;
 
-    @media screen and (min-width: 20em) and (max-width: 40em) {
+    @media only screen and (min-width: 40em) {
         --font-size: 1.4rem;
     }
 
-    @media screen and (min-width: 40em) and (max-width: 60em)  {
-        --font-size: 1.3rem;
+    @media only screen and (min-width: 64em) {
+        --font-size: 1.2rem;
     }
 
-    @media screen and (min-width: 60em) {
-        --font-size: 1.2rem;
+    @media only screen and (min-width: 80em) {
+        --font-size: 1.1rem;
     }
 }
 
@@ -34,7 +34,6 @@ html {
     padding: 0;
     box-sizing: inherit;
     font-family: inherit;
-    font-size: var(--font-size);
     line-height: 1.5rem;
     word-spacing: 0.5rem;
 }
@@ -53,6 +52,11 @@ html {
 .container {
     min-height: 100vh;
     background-color: $clr-primary;
+    font-size: var(--font-size);
+
+    &  * {
+        font-size: inherit;
+    }
 }
 
 // logo-menu-container
@@ -424,7 +428,7 @@ html {
     align-items: center;
     gap: 2rem;
 
-    @media screen and (max-width: 40em) {
+    @media screen and (max-width: 64em) {
         flex-direction: column;
     }
 }
@@ -438,7 +442,7 @@ html {
     justify-content: space-between;
     gap: 2rem;
     padding: 7rem 3rem;
-    min-width: 70vmin;
+    min-width: 20vmin;
     border-radius: 3rem;
     background-color: $clr-secondary;
     border: 0.1rem solid $clr-dark;
