@@ -121,6 +121,9 @@ html {
 // menu 
 
 .menu {
+    border: none;
+    background-color: transparent;
+
     @media  screen and (hover: hover) {
         &:focus {
             background-color: $clr-dark;
