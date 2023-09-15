@@ -7,7 +7,7 @@ const serviceLinks = document.querySelector(".service-links");
 /**@type {HTMLElement} */
 const menu = document.querySelector(".menu");
 /**@type {HTMLElement} */
-const mainNav = document.querySelector(".main-nav-list");
+const mainNavList = document.querySelector(".main-nav-list");
 /**@type {HTMLElement} */
 const root = document.querySelector(":root");
 /**@type {HTMLElement} */
@@ -19,7 +19,9 @@ const subLinks = document.querySelectorAll(".sub-link");
 const desktop = matchMedia("(min-width: 60em)");
 
 serviceLinks.classList.add("service-links-closed");
-mainNav.classList.add("main-nav-list-closed");
+serviceLinks.classList.add("close");
+mainNavList.classList.add("main-nav-list-closed");
+mainNavList.classList.add("close");
 
 function makeNavLinksNotSubLinksFocusable () {
     navLinks.forEach((element) => {
@@ -60,9 +62,9 @@ function closeServiceLinks () {
 }
 
 function closeMenu () {
-    if(mainNav.classList.contains("main-nav-list-opened")) {
+    if(mainNavList.classList.contains("main-nav-list-opened")) {
         menu.classList.remove("menu-active");
-        mainNav.classList.remove("main-nav-list-opened");
+        mainNavList.classList.remove("main-nav-list-opened");
     }
 }
 
@@ -81,16 +83,27 @@ servicesBtn.addEventListener("click", () => {
     serviceLinks.classList.toggle("service-links-opened");
     makeSubLinksFocusable();
     makeSubLinksUnfocusable();
+    if(serviceLinks.classList.contains("service-links-opened")) {
+        serviceLinks.classList.remove("close");
+    } else {
+        setTimeout(() => {
+            serviceLinks.classList.add("close");
+        }, 500);
+    }
 });
 
 menu.addEventListener("click", () => {
     menu.classList.toggle("menu-active");
-    mainNav.classList.toggle("main-nav-list-opened");
+    mainNavList.classList.toggle("main-nav-list-opened");
     if(menu.classList.contains("menu-active")) {
+        mainNavList.classList.remove("close");
         makeNavLinksNotSubLinksFocusable();
         servicesBtn.tabIndex = 0;
     } else {
         servicesBtn.tabIndex = -1;
+        setTimeout(() => {
+            mainNavList.classList.add("close");
+        }, 500);
     }
     closeServiceLinks();
     makeNavLinksUnfocusable();

@@ -178,6 +178,13 @@ html {
     overflow: hidden;
 }
 
+// close
+
+.close {
+    height: 0;
+    width: 0;
+}
+
 // main-nav-list, service-links
 
 .main-nav-list,
@@ -196,16 +203,12 @@ html {
 // main-nav-list-closed
 
 .main-nav-list-closed {
-    height: 0;
-    width: 0;
     transform: translateX(-100%);
 }
 
 // main-nav-list-opened
 
 .main-nav-list-opened {
-    height: initial;
-    width: initial;
     transform: translateX(0);
 }
 
@@ -219,23 +222,13 @@ html {
 // service-links-closed
 
 .service-links-closed {
-    height: 0;
     transform: translateY(100%);
-
-    .sub-link {
-        display: none;
-    }
 }
 
 // service-links-opened
 
 .service-links-opened {
-    height: initial;
     transform: translateY(0);
-
-    .sub-link {
-        display: block;
-    }
 }
 
 // nav-item
