@@ -118,6 +118,10 @@ navLinks.forEach((element) => {
         closeMenu();
         makeNavLinksUnfocusable();
         closeServiceLinks();
+        setTimeout(() => {
+            mainNavList.classList.add("close");
+            serviceLinks.classList.add("close");
+        }, 500);
     });
 });
 
