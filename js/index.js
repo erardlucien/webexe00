@@ -103,6 +103,7 @@ menu.addEventListener("click", () => {
         servicesBtn.tabIndex = -1;
         setTimeout(() => {
             mainNavList.classList.add("close");
+            serviceLinks.classList.add("close");
         }, 500);
     }
     closeServiceLinks();
