@@ -142,7 +142,7 @@ subLinks.forEach((element) => {
 
 goTop.addEventListener("click", () => {
     window.scrollBy({
-        behavior: "smooth",
+        behavior: "instant",
         top: root.getBoundingClientRect().top,
     });
 });
@@ -152,8 +152,8 @@ for(let index = 0; index < gotoContents1.length; ++index) {
         event.preventDefault();
         window.scrollBy(
             {
-                behavior: "smooth",
-                top: linkedContents1[index].getBoundingClientRect().top - 500,
+                behavior: "instant",
+                top: linkedContents1[index].getBoundingClientRect().top - 100,
             }
         );
     });
@@ -164,8 +164,8 @@ for(let index = 0; index < gotoContents2.length; ++index) {
         event.preventDefault();
         window.scrollBy(
             {
-                behavior: "smooth",
-                top: linkedContents2[index].getBoundingClientRect().top - 500,
+                behavior: "instant",
+                top: linkedContents2[index].getBoundingClientRect().top - 100,
             }
         );
     });
