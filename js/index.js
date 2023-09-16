@@ -16,6 +16,10 @@ const goTop = document.querySelector(".go-top");
 const navLinks = document.querySelectorAll(".nav-link");
 /**@type {HTMLElement} */
 const subLinks = document.querySelectorAll(".sub-link");
+const gotoContents1 = document.querySelectorAll(".goto-content-1");
+const gotoContents2 = document.querySelectorAll(".goto-content-2");
+const linkedContents1 = document.querySelectorAll(".linked-content-1");
+const linkedContents2 = document.querySelectorAll(".linked-content-2");
 const desktop = matchMedia("(min-width: 60em)");
 
 serviceLinks.classList.add("service-links-closed");
@@ -142,6 +146,30 @@ goTop.addEventListener("click", () => {
         top: root.getBoundingClientRect().top,
     });
 });
+
+for(let index = 0; index < gotoContents1.length; ++index) {
+    gotoContents1[index].addEventListener("click", (event) => {
+        event.preventDefault();
+        window.scrollBy(
+            {
+                behavior: "smooth",
+                top: linkedContents1[index].getBoundingClientRect().top - 500,
+            }
+        );
+    });
+}
+
+for(let index = 0; index < gotoContents2.length; ++index) {
+    gotoContents2[index].addEventListener("click", (event) => {
+        event.preventDefault();
+        window.scrollBy(
+            {
+                behavior: "smooth",
+                top: linkedContents2[index].getBoundingClientRect().top - 500,
+            }
+        );
+    });
+}
 
 changeOnBehalfOfScreenSize();
 

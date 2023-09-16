@@ -175,6 +175,16 @@ html {
     top: 70%;
 }
 
+// main-header
+
+.main-header {
+    background-color: $clr-ternary;
+    position: sticky;
+    top: -1rem;
+    left: 0;
+    z-index: 99;
+}
+
 // main-nav
 
 .main-nav {
