@@ -59,10 +59,20 @@ html {
     }
 }
 
+// main-header
+
+.main-header {
+    position: sticky;
+    top: -1rem;
+    left: 0;
+    z-index: 99;
+}
+
 // logo-menu-container
 
 .logo-menu-container {
     display: flex;
+    background-color: $clr-ternary;
     padding: 1.2rem 2rem;
     justify-content: space-between;
 }
@@ -173,16 +183,6 @@ html {
 
 .line-3 {
     top: 70%;
-}
-
-// main-header
-
-.main-header {
-    background-color: $clr-ternary;
-    position: sticky;
-    top: -1rem;
-    left: 0;
-    z-index: 99;
 }
 
 // main-nav
